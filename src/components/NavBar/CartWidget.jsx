@@ -1,8 +1,13 @@
-import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import cart from "../../cart.png";
+import "./NavBar.css";
+
 
 function CartWidget() {
-		<img className="image-fluid" src="../../cart.png" alt="Carrito"/>
-}
+
+	return (
+		<img className="cart" src={cart} alt="Carrito"></img>
+	);
+};
 
 export default CartWidget;

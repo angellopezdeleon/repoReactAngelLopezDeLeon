@@ -1,0 +1,21 @@
+.cart {
+	max-width: 35px;
+	height: auto;
+}
+
+.navbar-toggler-icon {
+	background-image: none;
+	border-radius: transparent !important;
+}
+.navbar-toggler-icon::before {
+	font-family: FontAwesome;
+	content: "\f0c9"; /* fa-bars, fa-navicon */
+}
+
+.navbar-toggler {
+    border-color: transparent !important;
+}
+
+.navbar.light {
+    border-color: transparent !important;
+}

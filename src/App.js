@@ -1,9 +1,8 @@
-import React from "react";
-import ReactDOM from 'react-dom/client';
-
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemCount from "./components/ItemCount/ItemCount";
+
 
 function App() {
   return (
@@ -13,5 +12,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
