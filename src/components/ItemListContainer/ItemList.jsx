@@ -8,8 +8,9 @@ let [data, setData] = useState([]);
 
 useEffect(
 	() => {
-	getItems().then( respuesta => setData(respuesta));
-	}
+			getItems().then( respuesta => setData(respuesta));
+		}, 
+	[]
 )
 
   return (
