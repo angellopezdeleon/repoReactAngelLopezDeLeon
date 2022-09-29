@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import nodalLogo from "../../soloNodalLogo2.png";
 import "../../cart.png";
@@ -7,26 +9,26 @@ import "./NavBar.css";
 function NavBar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg black navbar-dark">
+      <nav className="navbar navbar-expand-lg dark navbar-dark">
         <div className="container-fluid">
-          <a className="navbar-brand col-4" href="index.html">
+          <Link className="navbar-brand col-2" to="/">
             <img className="img-fluid" src={nodalLogo} alt="Logotipo Nodal" />
-          </a>
+          </Link>
             <ul className="navbar-nav my-2 my-lg-0">
               <li className="nav-item py-0 pl-3 d-flex align-items-center">
-                <a className="nav-link py-0 pl-3" href=".">
-                  TU CUENTA
-                </a>
+                <Link className="nav-link py-0 pl-3" to="/category/terror">
+                  TERROR
+                </Link>
               </li>
               <li className="nav-item py-0 pl-3 d-flex align-items-center">
-                <a className="nav-link py-0 pl-3" href="." tabIndex="-1">
-                  CONTACTO
-                </a>
+                <Link className="nav-link py-0 pl-3" to="/category/comedia" tabIndex="-1">
+                  COMEDIA
+                </Link>
               </li>
               <li className="nav-item py-0 pl-3 d-flex align-items-center">
-                <a className="nav-link py-0 pl-3" href="." tabIndex="-2">
+                <Link className="nav-link py-0 pl-3" to="/" tabIndex="-2">
                   <CartWidget />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
