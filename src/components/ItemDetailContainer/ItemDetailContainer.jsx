@@ -5,10 +5,6 @@ import { useParams } from "react-router-dom";
 
 function ItemDetailContainer() {
   let [data, setData] = useState({});
-
-//   const params = useParams(itemid);
-//   const itemid = params.id;
-
   const { itemid } = useParams();
 
   useEffect(() => {
@@ -19,9 +15,10 @@ function ItemDetailContainer() {
     <div className="main container">
       <ItemDetail
         key={data.id}
-        title={data.tittle}
+        id={data.id}
+        title={data.title}
         image={data.imgURL}
-        imageTittle={data.tittle}
+        imagetitle={data.title}
         description={data.description}
         stock={data.stock}
       />

@@ -19,15 +19,14 @@ export default function ItemList() {
   return (
     <div className="d-flex flex-wrap main container">
       {data.map((item) => {
-        console.log(item);
         return (
           <Item
             key={item.id}
             id={item.id}
-			category={item.category}
-            title={item.tittle}
+			      category={item.category}
+            title={item.title}
             image={item.imgURL}
-            imageTittle={item.tittle}
+            imagetitle={item.title}
             description={item.description}
             stock={item.id}
           />

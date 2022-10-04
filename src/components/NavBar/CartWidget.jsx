@@ -1,12 +1,18 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import cart from "../../cart.png";
+import { useContext } from "react";
+import cartImg from "../../cart.png";
+import { cartContext } from "../../context/CartContext";
 import "./NavBar.css";
 
-
 function CartWidget() {
+	const { getTotalItems } = useContext(cartContext);
 
 	return (
-		<img className="cart" src={cart} alt="Carrito"></img>
+		<div>
+			<img className="cart" src={cartImg} alt="Carrito"></img>
+			<span>x</span>
+			<span>{getTotalItems()}</span>
+		</div>
 	);
 };
 
