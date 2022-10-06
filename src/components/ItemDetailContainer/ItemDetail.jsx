@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemListContainer/ItemCount";
-import {cartContext} from "../../context/CartContext";
+import { cartContext } from "../../context/CartContext";
 
 function ItemDetail(item) {
   // Guardar un estado con el valor de count del itemcount
@@ -19,6 +19,7 @@ function ItemDetail(item) {
       <h2 className="mb-2 text-light">{item.title}</h2>
       <img className="img-fluid" src={item.image} alt={item.imagetitle} />
       <p className="m-3 text-light"> {item.description} </p>
+      <p className="m-3 text-light"> ${item.price} </p>
       {statusCount === true ? (
         <ItemCount stock={item.stock} onAddToCart={handleAddToCart} />
       ) : (

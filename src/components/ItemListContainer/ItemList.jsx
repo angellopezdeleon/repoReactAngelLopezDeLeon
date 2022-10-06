@@ -21,7 +21,6 @@ export default function ItemList() {
       {data.map((item) => {
         return (
           <Item
-            key={item.id}
             id={item.id}
 			      category={item.category}
             title={item.title}
@@ -29,6 +28,7 @@ export default function ItemList() {
             imagetitle={item.title}
             description={item.description}
             stock={item.id}
+            price={item.price}
           />
         );
       })}

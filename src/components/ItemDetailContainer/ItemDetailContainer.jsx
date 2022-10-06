@@ -21,6 +21,7 @@ function ItemDetailContainer() {
         imagetitle={data.title}
         description={data.description}
         stock={data.stock}
+        price={data.price}
       />
     </div>
   );

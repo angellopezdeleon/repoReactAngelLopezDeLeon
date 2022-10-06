@@ -26,7 +26,7 @@ function NavBar() {
                 </Link>
               </li>
               <li className="nav-item py-0 pl-3 d-flex align-items-center">
-                <Link className="nav-link py-0 pl-3" to="/" tabIndex="-2">
+                <Link className="nav-link py-0 pl-3" to="/cart" tabIndex="-2">
                   <CartWidget />
                 </Link>
               </li>
