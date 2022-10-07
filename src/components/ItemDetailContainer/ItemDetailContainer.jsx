@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-import { getSingleItem } from "../../services/mockAPI";
+import { getSingleItem } from "../../services/firestore";
 import { useParams } from "react-router-dom";
 
 function ItemDetailContainer() {

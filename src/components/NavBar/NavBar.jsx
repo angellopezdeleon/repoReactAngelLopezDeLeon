@@ -16,13 +16,23 @@ function NavBar() {
           </Link>
             <ul className="navbar-nav my-2 my-lg-0">
               <li className="nav-item py-0 pl-3 d-flex align-items-center">
-                <Link className="nav-link py-0 pl-3" to="/category/terror">
-                  TERROR
+                <Link className="nav-link py-0 pl-3" to="/category/men's clothing">
+                  Men's clothing
                 </Link>
               </li>
               <li className="nav-item py-0 pl-3 d-flex align-items-center">
-                <Link className="nav-link py-0 pl-3" to="/category/comedia" tabIndex="-1">
-                  COMEDIA
+                <Link className="nav-link py-0 pl-3" to="/category/jewelery">
+                  Jewelery
+                </Link>
+              </li>
+              <li className="nav-item py-0 pl-3 d-flex align-items-center">
+                <Link className="nav-link py-0 pl-3" to="/category/electronics">
+                  Electronics
+                </Link>
+              </li>
+              <li className="nav-item py-0 pl-3 d-flex align-items-center">
+                <Link className="nav-link py-0 pl-3" to="/category/women's clothing" tabIndex="-1">
+                  Women's clothing
                 </Link>
               </li>
               <li className="nav-item py-0 pl-3 d-flex align-items-center">

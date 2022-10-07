@@ -15,10 +15,10 @@ export default function App() {
           <NavBar />
           <Routes>
             <Route path="/" element= {
-              <ItemListContainer greeting="Tienda de productos de cine" />
+              <ItemListContainer greeting="Tienda de productos random" />
             }/>
             <Route path="/category/:cat" element= {
-              <ItemListContainer greeting="Tienda de productos de CINE" />
+              <ItemListContainer greeting="Tienda de productos random" />
             }/>
             <Route path="/item/:itemid" element= {
               <ItemDetailContainer />

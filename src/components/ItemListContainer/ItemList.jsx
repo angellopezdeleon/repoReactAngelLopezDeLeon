@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Item from "./Item.jsx";
-import { getItems, getItemsByCategory } from "../../services/mockAPI.js";
+import { getItems, getItemsByCategory } from "../../services/firestore";
 import { useParams } from "react-router-dom";
 
 export default function ItemList() {
@@ -11,16 +11,16 @@ export default function ItemList() {
     if (cat === undefined) {
       getItems().then((respuesta) => setData(respuesta));
     } else {
-      getItemsByCategory(cat).then((respuestaDatos) => setData(respuestaDatos)
+    getItemsByCategory(cat).then((respuestaDatos) => setData(respuestaDatos)
       );
-    }
-  }, [cat]);
+    }}, [cat]);
 
   return (
     <div className="d-flex flex-wrap main container">
       {data.map((item) => {
         return (
           <Item
+            key={item.id}
             id={item.id}
 			      category={item.category}
             title={item.title}
