@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { cartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import CheckoutForm from "./CheckoutForm";
 
 export default function CartView() {
   const context = useContext(cartContext);
@@ -50,6 +51,7 @@ export default function CartView() {
           Eliminar todos los productos
         </button>
       </div>
+      <CheckoutForm />
     </div>
   );
 }

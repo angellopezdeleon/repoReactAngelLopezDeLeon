@@ -17,7 +17,11 @@ function ItemDetail(item) {
   return (
     <div className="d-flex justify-content-center align-items-center flex-column m-5 p-3 w-50 mw-100 border border-white">
       <h2 className="mb-2 text-light">{item.title}</h2>
-      <img className='img-thumbnail w-25 img-fluid' src={item.image} alt={item.imagetitle} />
+      <img
+        className="img-thumbnail w-25 img-fluid"
+        src={item.image}
+        alt={item.imagetitle}
+      />
       <p className="m-3 text-light"> {item.description} </p>
       <p className="m-3 text-light"> ${item.price} </p>
       {statusCount === true ? (
