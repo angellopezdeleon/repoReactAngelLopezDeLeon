@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { cartContext } from "../../context/CartContext";
 import { createBuyOrder } from "../../services/firestore";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
+// import Swal from "sweetalert2";
+// import withReactContent from "sweetalert2-react-content";
 
 function CheckoutForm() {
   const [dataForm, setDataForm] = useState({
@@ -29,17 +29,17 @@ function CheckoutForm() {
     };
     createBuyOrder(orderData).then((orderid) => {
       navigate(`/checkout/${orderid}`);
-      // alert("Apunte este código para terminar su compra: " + orderid);
-	  MySwal.fire({
-		title: <p>Compra realizada con éxito</p>,
-		didOpen: () => {
-		  // `MySwal` is a subclass of `Swal` with all the same instance & static methods
-		  MySwal.showLoading();
-		},
-	  }).then(() => {
-		return MySwal.fire(<p>Apunte este código: {orderid}</p>);
-	  });
-      clearCart();
+      alert("Apunte este código para terminar su compra: " + orderid);
+      // MySwal.fire({
+      //   title: <p>Compra realizada con éxito</p>,
+      //   didOpen: () => {
+      //     // `MySwal` is a subclass of `Swal` with all the same instance & static methods
+      //     MySwal.showLoading();
+      //   },
+      //   }).then(() => {
+      //   return MySwal.fire(<p>Apunte este código: {orderid}</p>);
+      //   });
+      //     clearCart();
     });
   }
 
