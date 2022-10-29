@@ -1,5 +1,4 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { cartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import CheckoutForm from "./CheckoutForm";
@@ -23,7 +22,10 @@ export default function CartView() {
   return (
     <div className="d-flex justify-content-center align-items-center flex-column m-2 p-1">
       {cart.map((item) => (
-        <div className="d-flex justify-content-center align-items-center flex-column m-2 p-1 w-50 mw-50 border border-white">
+        <div
+          className="d-flex justify-content-center align-items-center flex-column m-2 p-1 w-50 mw-50 border border-white"
+          key={item.id}
+        >
           <h3 className="mb-2 text-light">{item.title}</h3>
           <div className="d-flex justify-content-center align-items-center flex-row">
             <p className="m-2 text-light">Cantidad: {item.counter}</p>

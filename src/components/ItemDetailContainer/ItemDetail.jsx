@@ -4,7 +4,6 @@ import ItemCount from "../ItemListContainer/ItemCount";
 import { cartContext } from "../../context/CartContext";
 
 function ItemDetail(item) {
-  // Guardar un estado con el valor de count del itemcount
   let [statusCount, countToCart] = useState(true);
 
   const { addItem } = useContext(cartContext);
@@ -15,7 +14,7 @@ function ItemDetail(item) {
   }
 
   return (
-    <div className="d-flex justify-content-center align-items-center flex-column m-5 p-3 w-50 mw-100 border border-white">
+    <div className="d-flex justify-content-center align-items-center flex-column m-5 p-3 mw-100 border border-white">
       <h2 className="mb-2 text-light">{item.title}</h2>
       <img
         className="img-thumbnail w-25 img-fluid"
@@ -23,15 +22,22 @@ function ItemDetail(item) {
         alt={item.imagetitle}
       />
       <p className="m-3 text-light"> {item.description} </p>
-      <p className="m-3 text-light"> ${item.price} </p>
+      <h4 className="m-3 text-light"> ${item.price} </h4>
       {statusCount === true ? (
         <ItemCount stock={item.stock} onAddToCart={handleAddToCart} />
       ) : (
-        <Link to="/cart">
-          <button className="btn btn-sm btn-light mt-2 ms-2 mb-2">
-            Terminar mi compra
-          </button>
-        </Link>
+        <div>
+          <Link to="/cart">
+            <button className="btn btn-sm btn-light mt-2 ms-2 mb-2">
+              Terminar mi compra
+            </button>
+          </Link>
+          <Link to="/">
+            <button className="btn btn-sm btn-light mt-2 ms-2 mb-2">
+              Volver a la tienda
+            </button>
+          </Link>
+        </div>
       )}
     </div>
   );

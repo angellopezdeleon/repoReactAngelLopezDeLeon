@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import cartImg from "../../cart.png";
 import { cartContext } from "../../context/CartContext";
 import "./NavBar.css";

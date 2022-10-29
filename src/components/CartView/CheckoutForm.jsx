@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { cartContext } from "../../context/CartContext";
 import { createBuyOrder } from "../../services/firestore";
-// import Swal from "sweetalert2";
-// import withReactContent from "sweetalert2-react-content";
 
 function CheckoutForm() {
   const [dataForm, setDataForm] = useState({
@@ -13,14 +9,11 @@ function CheckoutForm() {
     email: "",
   });
 
-  const navigate = useNavigate();
   const context = useContext(cartContext);
   const { cart, getTotalPrice, clearCart } = context;
-  const MySwal = withReactContent(Swal);
 
   function handleCheckout(event) {
     event.preventDefault();
-    /* { buyer: { name, phone, email }, items: [{id, title, price}], total  } */
     const orderData = {
       buyer: dataForm,
       items: cart,
@@ -28,18 +21,8 @@ function CheckoutForm() {
       total: getTotalPrice(),
     };
     createBuyOrder(orderData).then((orderid) => {
-      navigate(`/checkout/${orderid}`);
       alert("Apunte este código para terminar su compra: " + orderid);
-      // MySwal.fire({
-      //   title: <p>Compra realizada con éxito</p>,
-      //   didOpen: () => {
-      //     // `MySwal` is a subclass of `Swal` with all the same instance & static methods
-      //     MySwal.showLoading();
-      //   },
-      //   }).then(() => {
-      //   return MySwal.fire(<p>Apunte este código: {orderid}</p>);
-      //   });
-      //     clearCart();
+      clearCart();
     });
   }
 
@@ -66,7 +49,6 @@ function CheckoutForm() {
             required
           />
         </div>
-
         <div className="form-item">
           <label htmlFor="telefono"></label>
           <input
@@ -78,7 +60,6 @@ function CheckoutForm() {
             required
           />
         </div>
-
         <div className="form-item">
           <label htmlFor="email"></label>
           <input
