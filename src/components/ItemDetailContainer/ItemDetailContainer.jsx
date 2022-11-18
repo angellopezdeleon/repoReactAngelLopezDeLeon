@@ -23,7 +23,7 @@ function ItemDetailContainer() {
       <>
         {error ? (
           <div>
-            <h2 style={{ color: "#aa0033" }}>Error obteniendo los datos</h2>
+            <h2 style={{ color: "#FF5733" }}>Error obteniendo los datos</h2>
             <p>{error}</p>
           </div>
         ) : (

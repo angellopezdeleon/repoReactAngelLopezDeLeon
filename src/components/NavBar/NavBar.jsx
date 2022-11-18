@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import nodalLogo from "../../soloNodalLogo2.png";
-import "../../cart.png";
+import nodalLogo from "../../assets/soloNodalLogo2.png";
+import "../../assets/cart.png";
 import CartWidget from "./CartWidget.jsx";
 import "./NavBar.css";
 

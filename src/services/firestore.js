@@ -33,8 +33,7 @@ export async function getItems() {
     let docFormatted = { ...documento.data(), id: documento.id };
     return docFormatted;
   });
-
-  return dataDocs;
+    return dataDocs;
 }
 
 export async function getSingleItem(idItem) {

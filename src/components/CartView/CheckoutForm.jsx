@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { cartContext } from "../../context/CartContext";
 import { createBuyOrder } from "../../services/firestore";
+import { useNavigate } from "react-router-dom";
 
 function CheckoutForm() {
   const [dataForm, setDataForm] = useState({
@@ -11,6 +12,7 @@ function CheckoutForm() {
 
   const context = useContext(cartContext);
   const { cart, getTotalPrice, clearCart } = context;
+  const navigate = useNavigate();
 
   function handleCheckout(event) {
     event.preventDefault();
@@ -21,7 +23,7 @@ function CheckoutForm() {
       total: getTotalPrice(),
     };
     createBuyOrder(orderData).then((orderid) => {
-      alert("Apunte este código para terminar su compra: " + orderid);
+      navigate(`/checkout/${orderid}`);
       clearCart();
     });
   }
